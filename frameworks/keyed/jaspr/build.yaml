@@ -1,0 +1,5 @@
+global_options:
+  build_web_compilers:entrypoint:
+    options:
+      dart2js_args:
+        - -Djaspr.web.debug=false
