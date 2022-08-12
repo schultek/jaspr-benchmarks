@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "jaspr-demo"
+  },
+  "targets": {
+    "jaspr-demo": {
+      "hosting": {
+        "benchmarks": [
+          "jaspr-benchmarks"
+        ]
+      }
+    }
+  }
+}

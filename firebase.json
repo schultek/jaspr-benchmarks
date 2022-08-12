@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "target": "benchmarks",
+    "public": "js-framework-benchmark/webdriver-ts-results/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/table.html"
+      }
+    ]
+  }
+}
