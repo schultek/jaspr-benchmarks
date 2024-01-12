@@ -7,7 +7,7 @@ void main() {
 }
 
 class App extends StatefulComponent {
-  const App({Key? key}) : super(key: key);
+  const App({super.key});
 
   @override
   _AppState createState() => _AppState();
@@ -177,10 +177,7 @@ class ItemRow extends StatelessComponent {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ItemRow &&
-          runtimeType == other.runtimeType &&
-          selected == other.selected &&
-          dataItem == other.dataItem;
+      other is ItemRow && runtimeType == other.runtimeType && selected == other.selected && dataItem == other.dataItem;
 
   @override
   int get hashCode => selected.hashCode ^ dataItem.hashCode;
