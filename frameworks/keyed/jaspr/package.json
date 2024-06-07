@@ -4,7 +4,7 @@
     "description": "Jaspr (keyed)",
     "main": "index.js",
     "js-framework-benchmark": {
-        "frameworkVersion": "DART"
+        "frameworkVersion": "0.13.0"
     },
     "scripts": {
         "build-dev": "dart pub get && dart compile js -O2 -o build/main.dart.js web/main.dart --define=include.debug.utils=false",
@@ -13,12 +13,5 @@
     "keywords": [
         "jaspr",
         "dart"
-    ],
-    "author": "Stefan Krause",
-    "license": "Apache-2.0",
-    "homepage": "https://github.com/krausest/js-framework-benchmark",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/krausest/js-framework-benchmark.git"
-    }
+    ]
 }

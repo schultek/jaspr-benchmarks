@@ -62,7 +62,19 @@ const adjectives = [
   "fancy"
 ];
 
-const colors = ["red", "yellow", "blue", "green", "pink", "brown", "purple", "brown", "white", "black", "orange"];
+const colors = [
+  "red",
+  "yellow",
+  "blue",
+  "green",
+  "pink",
+  "brown",
+  "purple",
+  "brown",
+  "white",
+  "black",
+  "orange"
+];
 
 const nouns = [
   "table",

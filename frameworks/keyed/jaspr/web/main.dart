@@ -1,4 +1,4 @@
-import 'package:jaspr/jaspr.dart';
+import 'package:jaspr/browser.dart';
 import 'package:jaspr_bench/data.dart';
 import 'package:jaspr_bench/jumbotron.dart';
 
@@ -15,40 +15,26 @@ class App extends StatefulComponent {
 
 class _AppState extends State<App> {
   var _data = <DataItem>[];
-  DataItem? _selected;
+  String? _selected;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield DomComponent(tag: 'div', classes: const [
-      'container'
-    ], children: [
+    yield div(classes: 'container', [
       Jumbotron(
         run: _run,
         runLots: _runLots,
         append: _append,
-        prepend: _prepend,
         update: _update,
         swap: _swap,
         clear: _clear,
-        moveToTop: _moveToTop,
-        moveToBottom: _moveToBottom,
-        addToTop: _addToTop,
-        addToBottom: _addToBottom,
-        add100ToTop: _add100ToTop,
-        add100ToBottom: _add100ToBottom,
       ),
-      DomComponent(tag: 'table', classes: const [
-        'table',
-        'table-hover',
-        'table-striped',
-        'test-data'
-      ], children: [
+      DomComponent(tag: 'table', classes: 'table table-hover table-striped test-data', children: [
         DomComponent(tag: 'tbody', children: [
           for (var dataItem in _data)
             ItemRow(
               key: ValueKey(dataItem.idString),
               dataItem: dataItem,
-              selected: _selected == dataItem,
+              selected: _selected == dataItem.idString,
               onSelect: (_) => _select(dataItem),
               onRemove: (_) => _remove(dataItem),
             ),
@@ -76,12 +62,6 @@ class _AppState extends State<App> {
   void _append(dynamic event) {
     setState(() {
       _data.addAll(buildData(1000));
-    });
-  }
-
-  void _prepend(dynamic event) {
-    setState(() {
-      _data.insertAll(0, buildData(1000));
     });
   }
 
@@ -113,49 +93,13 @@ class _AppState extends State<App> {
 
   void _select(DataItem dataItem) {
     setState(() {
-      _selected = dataItem;
+      _selected = dataItem.idString;
     });
   }
 
   void _remove(DataItem dataItem) {
     setState(() {
       _data.remove(dataItem);
-    });
-  }
-
-  void _moveToTop(dynamic event) {
-    setState(() {
-      _data.insert(1, _data.removeAt(998));
-    });
-  }
-
-  void _moveToBottom(dynamic event) {
-    setState(() {
-      _data.insert(998, _data.removeAt(1));
-    });
-  }
-
-  void _addToTop(dynamic event) {
-    setState(() {
-      _data.insert(1, buildData(1).first);
-    });
-  }
-
-  void _addToBottom(dynamic event) {
-    setState(() {
-      _data.insert(998, buildData(1).first);
-    });
-  }
-
-  void _add100ToTop(dynamic event) {
-    setState(() {
-      _data.insertAll(1, buildData(100));
-    });
-  }
-
-  void _add100ToBottom(dynamic event) {
-    setState(() {
-      _data.insertAll(998, buildData(100));
     });
   }
 }
@@ -180,21 +124,16 @@ class ItemRow extends StatelessComponent {
       other is ItemRow && runtimeType == other.runtimeType && selected == other.selected && dataItem == other.dataItem;
 
   @override
-  int get hashCode => selected.hashCode ^ dataItem.hashCode;
-
-  @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield DomComponent(tag: 'tr', classes: [
-      if (selected) 'danger'
-    ], children: [
+    yield DomComponent(tag: 'tr', classes: selected ? 'danger' : '', children: [
       DomComponent(
         tag: 'td',
-        classes: const ['col-md-1'],
+        classes: 'col-md-1',
         child: Text(dataItem.idString),
       ),
       DomComponent(
         tag: 'td',
-        classes: const ['col-md-4'],
+        classes: 'col-md-4',
         child: DomComponent(
           tag: 'a',
           events: {'click': onSelect},
@@ -203,20 +142,20 @@ class ItemRow extends StatelessComponent {
       ),
       DomComponent(
         tag: 'td',
-        classes: const ['col-md-1'],
+        classes: 'col-md-1',
         child: DomComponent(
           tag: 'a',
           events: {'click': onRemove},
           child: const DomComponent(
             tag: 'span',
-            classes: ['glyphicon', 'glyphicon-remove'],
+            classes: 'glyphicon glyphicon-remove',
             attributes: {'aria-hidden': 'true'},
           ),
         ),
       ),
       const DomComponent(
         tag: 'td',
-        classes: ['col-md-6'],
+        classes: 'col-md-6',
       ),
     ]);
   }

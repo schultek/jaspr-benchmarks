@@ -1,10 +1,6 @@
 # clone repo
 rm -rf js-framework-benchmark
-git clone https://github.com/erlage/js-framework-benchmark
-# forked rather than pining on https://github.com/krausest/js-framework-benchmark/
-
-# extend bench  driver
-cp -fr puppetter/* js-framework-benchmark/webdriver-ts/src/
+git clone https://github.com/krausest/js-framework-benchmark
 
 # install
 cd js-framework-benchmark

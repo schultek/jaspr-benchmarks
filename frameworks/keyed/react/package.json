@@ -4,7 +4,8 @@
     "description": "React demo",
     "main": "index.js",
     "js-framework-benchmark": {
-        "frameworkVersion": "JS"
+        "frameworkVersion": "JS",
+        "issues": []
     },
     "scripts": {
         "build-dev": "webpack --watch",

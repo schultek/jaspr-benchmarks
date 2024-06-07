@@ -245,10 +245,10 @@ packages:
     dependency: transitive
     description:
       name: hotreloader
-      sha256: "728c0613556c1d153f7e7f4a367cffacc3f5a677d7f6497a1c2b35add4e6dacf"
+      sha256: ed56fdc1f3a8ac924e717257621d09e9ec20e308ab6352a73a50a1d7a4d9158e
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.6"
+    version: "4.2.0"
   html:
     dependency: transitive
     description:
@@ -292,10 +292,11 @@ packages:
   jaspr:
     dependency: "direct main"
     description:
-      path: "../../../../packages/jaspr"
-      relative: true
-    source: path
-    version: "0.9.3"
+      name: jaspr
+      sha256: "880da4005b5468b70a2de44f87136ae68171008a4521116ddc1bcf35485bd4a5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.1"
   js:
     dependency: transitive
     description:

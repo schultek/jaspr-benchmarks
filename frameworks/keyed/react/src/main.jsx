@@ -70,14 +70,7 @@ class Jumbotron extends React.Component {
       runLots, 
       update, 
       swapRows, 
-      append, 
-      prepend, 
-      moveToTop, 
-      moveToBottom, 
-      addToTop, 
-      addToBottom,
-      add100ToTop, 
-      add100ToBottom,
+      append,
       clear, 
      } = this.props;
     return (
@@ -92,14 +85,7 @@ class Jumbotron extends React.Component {
               <Button id="runlots" title="Create 10,000 rows" cb={runLots} />
               <Button id="update" title="Update every 10th row" cb={update} />
               <Button id="swaprows" title="Swap Rows" cb={swapRows} />
-              <Button id="append" title="Append 1,000 rows" cb={append} />
-              <Button id="prepend" title="Prepend 1,000 rows" cb={prepend} />
-              <Button id="movetotop" title="Move to Top" cb={moveToTop} />
-              <Button id="movetobottom" title="Move to Bottom" cb={moveToBottom} />
-              <Button id="addtotop" title="Add to Top" cb={addToTop} />
-              <Button id="addtobottom" title="Add to Bottom" cb={addToBottom} />
-              <Button id="add100totop" title="Add 100 to Top" cb={add100ToTop} />
-              <Button id="add100tobottom" title="Add 100 to Bottom" cb={add100ToBottom} />
+              <Button id="add" title="Append 1,000 rows" cb={append} />
               <Button id="clear" title="Clear" cb={clear} />
             </div>
           </div>
@@ -125,14 +111,6 @@ class Main extends React.Component {
 
   append = () => {
     this.setState({ data: this.state.data.concat(buildData(1000)) });
-  }
-
-  prepend = () => {
-    const data = this.state.data;
-
-    data.splice(0, 0, ...buildData(1000));
-
-    this.forceUpdate();
   }
 
   update = () => {
@@ -168,50 +146,6 @@ class Main extends React.Component {
     this.forceUpdate();
   }
 
-  moveToTop = () => {
-    const data = this.state.data;
-    if (data.length > 998) {
-      let temp = data[998];
-      data.splice( 998, 1);
-      data.splice( 1, 0, temp );
-    }
-    this.forceUpdate();
-  }
-
-  moveToBottom = () => {
-    const data = this.state.data;
-    if (data.length > 998) {
-      let temp = data[1];
-      data.splice( 1, 1);
-      data.splice( 998, 0, temp );
-    }
-    this.forceUpdate();
-  }
-
-  addToTop = () => {
-    const data = this.state.data;
-    data.splice( 1, 0, buildData(1)[0] );
-    this.forceUpdate();
-  }
-
-  addToBottom = () => {
-    const data = this.state.data;
-    data.splice( 998, 0, buildData(1)[0] );
-    this.forceUpdate();
-  }
-
-  add100ToTop = () => {
-    const data = this.state.data;
-    data.splice( 1, 0, ...buildData(100) );
-    this.forceUpdate();
-  }
-
-  add100ToBottom = () => {
-    const data = this.state.data;
-    data.splice( 998, 0, ...buildData(100) );
-    this.forceUpdate();
-  }
-
   render() {
     return (<div className="container">
       
@@ -220,14 +154,7 @@ class Main extends React.Component {
         runLots={this.runLots} 
         update={this.update} 
         swapRows={this.swapRows} 
-        append={this.append} 
-        prepend={this.prepend}
-        moveToTop={this.moveToTop} 
-        moveToBottom={this.moveToBottom}
-        addToTop={this.addToTop} 
-        addToBottom={this.addToBottom}
-        add100ToTop={this.add100ToTop} 
-        add100ToBottom={this.add100ToBottom}
+        append={this.append}
         clear={this.clear} 
       />
 
