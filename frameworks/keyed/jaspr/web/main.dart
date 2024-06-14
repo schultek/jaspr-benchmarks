@@ -29,7 +29,7 @@ class _AppState extends State<App> {
         clear: _clear,
       ),
       DomComponent(tag: 'table', classes: 'table table-hover table-striped test-data', children: [
-        DomComponent(tag: 'tbody', children: [
+        DomComponent(key: ValueKey(_data.isNotEmpty), tag: 'tbody', children: [
           for (var dataItem in _data)
             ItemRow(
               key: ValueKey(dataItem.idString),
@@ -119,9 +119,9 @@ class ItemRow extends StatelessComponent {
   final EventCallback onRemove;
 
   @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ItemRow && runtimeType == other.runtimeType && selected == other.selected && dataItem == other.dataItem;
+  bool shouldRebuild(ItemRow newComponent) {
+    return selected != newComponent.selected || dataItem != newComponent.dataItem;
+  }
 
   @override
   Iterable<Component> build(BuildContext context) sync* {

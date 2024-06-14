@@ -8,8 +8,8 @@
         "issues": []
     },
     "scripts": {
-        "build-dev": "webpack --watch",
-        "build-prod": "webpack"
+        "build-dev": "NODE_OPTIONS=--openssl-legacy-provider webpack --watch",
+        "build-prod": "NODE_OPTIONS=--openssl-legacy-provider webpack"
     },
     "keywords": [
         "react",

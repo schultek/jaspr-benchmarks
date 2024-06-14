@@ -60,16 +60,13 @@ Visit: http://localhost:8080/webdriver-ts-results/dist/index.html on your machin
 
 2. Build frameworks:
     ```sh
-    sh build_frameworks.sh
+    sh build_all.sh
     ```
 
 2. Run benchmarks:
     ```sh
-    # benchmark keyed versions of Jaspr, React & Angular
-    sh run_keyed.sh 
-
-    # benchmark non-keyed versions of Jaspr & React
-    sh run_non_keyed.sh 
+    # benchmark Jaspr, React & Angular
+    sh run_all.sh 
     ```
 
 3. After running, build results table:

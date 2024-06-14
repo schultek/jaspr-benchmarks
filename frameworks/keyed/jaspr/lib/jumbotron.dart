@@ -18,6 +18,11 @@ class Jumbotron extends StatelessComponent {
   final EventCallback clear;
 
   @override
+  bool shouldRebuild(Jumbotron newComponent) {
+    return false;
+  }
+
+  @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'jumbotron', [
       div(classes: 'row', [

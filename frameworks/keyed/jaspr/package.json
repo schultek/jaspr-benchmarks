@@ -8,7 +8,7 @@
     },
     "scripts": {
         "build-dev": "dart pub get && dart compile js -O2 -o build/main.dart.js web/main.dart --define=include.debug.utils=false",
-        "build-prod": "dart pub get && dart compile js -O4 -o build/main.dart.js web/main.dart --define=include.debug.utils=false --define=jaspr.web.debug=false"
+        "build-prod": "dart pub get && dart compile js -O4 -o build/main.dart.js web/main.dart --define=include.debug.utils=false --define=jaspr.web.debug=false --define=jaspr.flags.verbose=false"
     },
     "keywords": [
         "jaspr",
