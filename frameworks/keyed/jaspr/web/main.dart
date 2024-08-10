@@ -10,10 +10,10 @@ class App extends StatefulComponent {
   const App({super.key});
 
   @override
-  _AppState createState() => _AppState();
+  AppState createState() => AppState();
 }
 
-class _AppState extends State<App> {
+class AppState extends State<App> {
   var _data = <DataItem>[];
   String? _selected;
 
@@ -70,7 +70,7 @@ class _AppState extends State<App> {
       for (var i = 0; i < _data.length; i += 10) {
         var item = _data[i];
 
-        _data[i] = DataItem(item.label + ' !!!', id: item.id);
+        _data[i] = DataItem('${item.label} !!!', id: item.id);
       }
     });
   }
@@ -110,8 +110,8 @@ class ItemRow extends StatelessComponent {
     required this.dataItem,
     required this.onSelect,
     required this.onRemove,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   final bool selected;
   final DataItem dataItem;
