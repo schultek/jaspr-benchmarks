@@ -5,23 +5,18 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: f6dbf021f4b214d85c79822912c5fcd142a2c4869f01222ad371bc51f9f1c356
+      sha256: e55636ed79578b9abca5fecf9437947798f5ef7456308b5cb85720b793eac92f
       url: "https://pub.dev"
     source: hosted
-    version: "74.0.0"
-  _macros:
-    dependency: transitive
-    description: dart
-    source: sdk
-    version: "0.3.3"
+    version: "82.0.0"
   analyzer:
     dependency: transitive
     description:
       name: analyzer
-      sha256: f7e8caf82f2d3190881d81012606effdf8a38e6c1ab9e30947149733065f817c
+      sha256: "904ae5bb474d32c38fb9482e2d925d5454cda04ddd0e55d2e6826bc72f6ba8c0"
       url: "https://pub.dev"
     source: hosted
-    version: "6.9.0"
+    version: "7.4.5"
   archive:
     dependency: transitive
     description:
@@ -74,10 +69,10 @@ packages:
     dependency: transitive
     description:
       name: build
-      sha256: "80184af8b6cb3e5c1c4ec6d8544d27711700bc3e6d2efad04238c7b5290889f0"
+      sha256: cef23f1eda9b57566c81e2133d196f8e3df48f244b317368d65c5943d91148f0
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.1"
+    version: "2.4.2"
   build_config:
     dependency: transitive
     description:
@@ -98,43 +93,42 @@ packages:
     dependency: transitive
     description:
       name: build_modules
-      sha256: "403ba034d94f1a0f26362fe14fd83e9ff33644f5cbe879982920e3d209650b43"
+      sha256: b1fc29a603669b25a5d95cc9610ed649e9f00e6075e5b6b721aa1a095cff13de
       url: "https://pub.dev"
     source: hosted
-    version: "5.0.9"
+    version: "5.0.13"
   build_resolvers:
     dependency: transitive
     description:
       name: build_resolvers
-      sha256: "339086358431fa15d7eca8b6a36e5d783728cf025e559b834f4609a1fcfb7b0a"
+      sha256: b9e4fda21d846e192628e7a4f6deda6888c36b5b69ba02ff291a01fd529140f0
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.2"
+    version: "2.4.4"
   build_runner:
     dependency: "direct dev"
     description:
       name: build_runner
-      sha256: "3ac61a79bfb6f6cc11f693591063a7f19a7af628dc52f141743edac5c16e8c22"
+      sha256: "058fe9dce1de7d69c4b84fada934df3e0153dd000758c4d65964d0166779aa99"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.9"
+    version: "2.4.15"
   build_runner_core:
     dependency: transitive
     description:
       name: build_runner_core
-      sha256: "4ae8ffe5ac758da294ecf1802f2aff01558d8b1b00616aa7538ea9a8a5d50799"
+      sha256: "22e3aa1c80e0ada3722fe5b63fd43d9c8990759d0a2cf489c8c5d7b2bdebc021"
       url: "https://pub.dev"
     source: hosted
-    version: "7.3.0"
+    version: "8.0.0"
   build_web_compilers:
     dependency: "direct dev"
     description:
-      path: build_web_compilers
-      ref: HEAD
-      resolved-ref: "1b33ba9ce294e574513db993fa3beeb5962671b8"
-      url: "https://github.com/dart-lang/build"
-    source: git
-    version: "4.0.12-wip"
+      name: build_web_compilers
+      sha256: f9b8e84dbfa7688221c2376e6f68ffd796597785a0a5b1e8cd2516a92fdc0a3c
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.5"
   built_collection:
     dependency: transitive
     description:
@@ -203,10 +197,10 @@ packages:
     dependency: transitive
     description:
       name: dart_style
-      sha256: "99e066ce75c89d6b29903d788a7bb9369cf754f7b24bf70bf4b6d6d6b26853b9"
+      sha256: "5b236382b47ee411741447c1f1e111459c941ea1b3f2b540dde54c210a3662af"
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.6"
+    version: "3.1.0"
   file:
     dependency: transitive
     description:
@@ -298,20 +292,19 @@ packages:
   jaspr:
     dependency: "direct main"
     description:
-      path: "packages/jaspr"
-      ref: "refactor/web"
-      resolved-ref: "238a4ca1c5a94900d62b4e0067c500e3bc7e8d93"
-      url: "https://github.com/schultek/jaspr"
-    source: git
-    version: "0.15.0"
+      name: jaspr
+      sha256: "76418277035a6bdaf39a1cb4a8ac11a384f447280d59a2311bb8773cdeba5be4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.0"
   jaspr_builder:
     dependency: "direct dev"
     description:
       name: jaspr_builder
-      sha256: ae2e433ffb218357c54724d7ede7c3d3ed72818e6e156453bba9f352a54f80a3
+      sha256: "5a3f5557df6b93c3c26fcf8a216d1d0594018f4806cca167a5ef4b2c532a1d53"
       url: "https://pub.dev"
     source: hosted
-    version: "0.15.0"
+    version: "0.19.0"
   js:
     dependency: transitive
     description:
@@ -344,14 +337,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  macros:
-    dependency: transitive
-    description:
-      name: macros
-      sha256: "1d9e801cd66f7ea3663c45fc708450db1fa57f988142c64289142c9b7ee80656"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.1.3-main.0"
   matcher:
     dependency: transitive
     description:
@@ -476,10 +461,10 @@ packages:
     dependency: transitive
     description:
       name: source_gen
-      sha256: "14658ba5f669685cd3d63701d01b31ea748310f7ab854e471962670abcf57832"
+      sha256: "35c8150ece9e8c8d263337a265153c3329667640850b9304861faea59fc98f6b"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.0"
+    version: "2.0.0"
   source_maps:
     dependency: transitive
     description:
@@ -560,6 +545,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
+  universal_web:
+    dependency: transitive
+    description:
+      name: universal_web
+      sha256: fd161c6424fd78625097429b0050c2ea967304fb2b8b5ea0c0f51cd41b915053
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0+2"
   vm_service:
     dependency: transitive
     description:
@@ -580,10 +573,10 @@ packages:
     dependency: transitive
     description:
       name: web
-      sha256: d43c1d6b787bf0afad444700ae7f4db8827f701bc61c255ac8d328c6f4d52062
+      sha256: cd3543bd5798f6ad290ea73d210f423502e71900302dde696f8bff84bf89a1cb
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   web_socket_channel:
     dependency: transitive
     description:
@@ -601,4 +594,4 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.5.0-259.0.dev <3.7.0"
+  dart: ">=3.7.0 <3.9.0-z"
