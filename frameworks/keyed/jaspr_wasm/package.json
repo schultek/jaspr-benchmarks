@@ -7,8 +7,8 @@
         "frameworkVersion": "0.15.0"
     },
     "scripts": {
-        "build-dev": "dart pub get && jaspr build -O2",
-        "build-prod": "dart pub get && jaspr build -O4"
+        "build-dev": "dart pub get && jaspr build --experimental-wasm",
+        "build-prod": "dart pub get && jaspr build -O4 --experimental-wasm"
     },
     "keywords": [
         "jaspr",
