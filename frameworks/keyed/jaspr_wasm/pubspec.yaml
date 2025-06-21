@@ -12,8 +12,8 @@ dependencies:
 dev_dependencies:
   build_runner: ^2.4.0
   build_web_compilers: ^4.1.0
-  jaspr_builder: ^0.19.0
-  lints: ^3.0.0
+  jaspr_builder: ^0.19.1
+  lints: ^5.0.0
 
 jaspr:
   mode: client
